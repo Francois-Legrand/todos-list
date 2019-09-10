@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="firstName">
+        <input type="text" v-model="lastName">
+        <h1>{{caze}}</h1>
+        <!--<input type="checkbox" v-model="seen">
+    <h1 v-show="seen">je m'appele {{ firstNAme }}</h1>-->
+
+        <!--<p v-show="seen" v-if="user">{{ droit }}</p>
+        <p v-else>{{ pasDroit }}</p>-->
+
+        <!--<a v-for='step in steps':href="step.href">{{step.title}}</a></li>-->
+        <!--<button @click="showPicture">Affiche l'image</button>
+            <img v-show="display" :src="img" alt="">-->
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                firstName: "françois",
+                lastName: "legrand",
+                },
+            computed:{
+                    caze: function () {
+                        
+                        return this.firstName.toUpperCase() + " "+this.lastName.toUpperCase()
+                    }
+                    /*seen: false,
+                    firstNAme :"françois"
+                    display: false,
+                    img: "1024px-HTML5_logo_and_wordmark.svg.png"*/
+
+                    /*steps:[
+                       {
+                           title:"google",
+                           href : "https://www.google.com"
+                       },
+                       {
+                           title:"youtube",
+                           href : "https://www.youtube.com"
+                       },
+                       {
+                           title:"linkedin",
+                           href : "https://www.linkedin.com"
+                       }
+                    ]*/
+
+                    /*name: 'françois',
+                    droit: "Vous avez le droit de voir le message",
+                    pasDroit: "Vous n'avez le droit de voir le message",
+                    seen: true,
+                    user: false*/
+                },
+                methods: {
+                    showPicture: function () {
+
+                        this.display = !this.display;
+
+                    }
+                }
+            })
+    </script>
+</body>
+
+</html>
